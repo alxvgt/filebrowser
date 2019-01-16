@@ -14,5 +14,5 @@ services:
         volumes:
             - '/root:/srv'
 networks:
-    network-proxy:
-        name: network-proxy
+  network-proxy:
+    external: true
