@@ -15,4 +15,5 @@ services:
             - '/root:/srv'
 networks:
   network-proxy:
-    external: true
+    external:
+      name: network-proxy
