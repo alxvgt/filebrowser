@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  filebrowser:
+        container_name: filebrowser
+        image: filebrowser/filebrowser
+        environment:
+            - VIRTUAL_HOST=browser.418.ovh
+            - VIRTUAL_PORT=8001
+        networks:
+            - network-proxy
+        ports:
+            - '8001:80'
+        volumes:
+            - '/root:/srv'
+networks:
+    network-proxy:
+        name: network-proxy
